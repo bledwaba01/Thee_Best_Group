@@ -1,0 +1,998 @@
+/* ======================================= */
+/* 1. CSS Reset and Global Styles */
+/* ======================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Rubik', 'Montserrat', sans-serif;
+    color: #1b1b1b; /* Adjusted to the body text color from the second file */
+    background-color: #ffffff; /* Adjusted to the background color from the second file */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ======================================= */
+/* 2. HEADER & NAVIGATION */
+/* ======================================= */
+
+/* Header Container */
+header {
+    background-color: #000f55;
+    position: relative;
+    height: 125px;
+    width: auto;
+    color: #fff; /* Ensure header text is white */
+}
+
+/*Logo */
+.logo-area {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #000f55;
+}
+
+.logo-image {
+    height: 100px;
+    width: auto;
+}
+
+/* Top Header Bar */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    font-size: 14px;
+}
+
+/* Top Left - Search and Social */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+}
+
+.social-icons a {
+    margin-left: 15px;
+}
+
+/* Using Unicode icons for simplicity */
+.icon {
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+/* Top Right - Book Now & Country */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.book-btn {
+    background-color:#cb2d29;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.book-btn:hover {
+    background-color: lightgrey;
+}
+
+/* Country Drop Down*/
+.country-select {
+    position: relative;
+    display: inline-block;
+}
+
+.country-btn {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 8px 12px;
+    background:#000f55 ;
+    color: #fff;
+    border: none; 
+    outline: none;
+}
+
+.country-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000f55;
+    min-width: 200px;
+    z-index: 1000;
+    margin-top: 5px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.country-select:hover .country-dropdown {
+    display: block;
+}
+
+.country-dropdown a {
+    display: block;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid #b3b3b3;
+    transition: background-color 0.2s;
+}
+
+.country-dropdown a:hover {
+    background-color: #b3b3b3;
+}
+
+
+/* Main Navigation Bar */
+.nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-group {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-main a:hover {
+    color: lightgrey;
+}
+
+/* ======================================= */
+/* 3. MAIN PROMO GRID STYLES */
+/* ======================================= */
+
+.promo-grid {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Left Panel*/
+.promo-section {
+    flex: 1;
+    background: url('images/promo_burger_monday.webp') no-repeat center center/cover;
+    position: relative;
+    padding: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 650px;
+    height: 390px;
+}
+
+
+.content-food {
+    position: relative;
+    z-index: 10;
+}
+
+.btn-large {
+    background-color: #fff;
+    color: #000f55;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-large:hover {
+    background-color: lightgrey;
+}
+
+/* Right Panel - Split Section */
+.promo-split {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Right Top - Plan a Party */
+.promo-party {
+    background: url('images/promo_party_kids.webp') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    background-color: #000f55; 
+    border-left: 5px solid #fff;
+}
+
+/* Right Bottom - Eat & Earn App */
+.promo-app {
+    background: url('images/promo_app.webp') no-repeat center center;
+    background-size: 100% 95%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    border-left: 5px solid #fff;
+}
+
+/* General Button Style for Split Panel */
+.btn-general {
+    background-color: #fff;
+    color: #000f55;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background-color 0.2s;
+    position: relative;
+    left: -15px;
+    top: 20px;
+}
+
+.btn-general:hover {
+    background-color: lightgrey;
+}
+
+/* ======================================= */
+/* 4. HERO SECTION */
+/* ======================================= */
+.hero {
+    background: linear-gradient(180deg, #ffffff, #f3f4f6);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-logo {
+    width: 120px;
+    margin-bottom: 25px;
+}
+
+.heroh1 {
+    font-family:'Oswald', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.herop {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.find-btn {
+    display: inline-block;
+    border: 2px solid #1a1a2e;
+    color: #1a1a2e;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.find-btn:hover {
+    background: #1a1a2e;
+    color: white;
+}
+
+/* ======================================= */
+/* 5. FRANCHISE & APP SECTIONS */
+/* ======================================= */
+.franchise-section,
+.app-section {
+    background-color: #000f55;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.content-row {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-image {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.app-logo {
+    width: 150px;
+    margin: 20px auto 10px;
+    display: block;
+}
+
+.content-rowh6 {
+    color: #ff7800;
+    font-size: 16px;
+    line-height: 28px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.content-rowh2 {
+    font-size: 26px;
+    line-height: 32px;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.content-rowp {
+    font-size: 14px;
+    line-height: 22px;
+    color: #fff;
+    margin: 0 auto 20px;
+    max-width: 800px;
+    font-family:'Rubik', 'Montserrat',sans-serif;
+}
+
+.content-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 6px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.content-button:hover {
+    background-color: #fff;
+    color: #000f55;
+}
+
+.app-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.app-buttons a {
+    display: inline-block;
+}
+
+.app-buttons img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.app-buttons img:hover {
+    transform: scale(1.05);
+}
+
+/* ======================================= */
+/* 6. WELCOME SECTION */
+/* ======================================= */
+.welcome-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px 20px;
+}
+
+.welcome-section h1 {
+    font-size: 2rem;
+    color: #000f55;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000f55;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.welcome-section a {
+    color: #000f55;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.welcome-section a:hover {
+    color: #555;
+}
+
+/* ======================================= */
+/* 7. FOOTER */
+/* ======================================= */
+
+/* Top Footer */
+.top-footer {
+    background-color: #ffffff;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.footer-logo p {
+    font-weight: bold;
+    color: #001f5b;
+    margin-top: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #001f5b;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #0056b3;
+}
+
+.footer-column strong {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right button {
+    background-color: #ffffff;
+    color: #001f5b;
+    border: 2px solid #001f5b;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 25px;
+}
+
+.footer-right button:hover {
+    background-color: #001f5b;
+    color: #ffffff;
+}
+
+.footer-right p {
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #001f5b;
+}
+
+.footer-right .number {
+    font-size: 24px;
+    color: #0073e6;
+    font-weight: bold;
+}
+
+/* Bottom Footer */
+.bottom-footer {
+    background-color: #f2f4f7;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%; /* Changed from the second CSS to allow for flex-wrap */
+}
+
+.bottom-left img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.bottom-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bottom-links a {
+    text-decoration: none;
+    color: #001f5b;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.bottom-links a:hover {
+    text-decoration: underline;
+}
+
+/* ======================================= */
+/* 8. RESPONSIVE DESIGN */
+/* ======================================= */
+@media (max-width: 768px) {
+    .heroh1 {
+        font-size: 32px;
+    }
+
+    .hero-logo {
+        width: 90px;
+    }
+
+    .content-rowh2 {
+        font-size: 22px;
+    }
+
+    .app-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .top-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .footer-links {
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+
+    .bottom-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .bottom-left {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .bottom-links {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* ======================================= */
+/* 9. ABOUT US INTRO SECTION */
+/* ======================================= */
+
+.about-us-intro {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-us-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #000f55; /* Dark blue color from the image */
+    margin-bottom: 25px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.about-us-text {
+    font-size: 16px;
+    color: #000f55;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.about-us-btn {
+    display: inline-block;
+    border: 2px solid #000f55;
+    color: #000f55;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.about-us-btn:hover {
+    background: #000f55;
+    color: white;
+}
+
+/* Update the media query to include the new section styles */
+@media (max-width: 768px) {
+    /* ... existing media query styles ... */
+
+    .about-us-title {
+        font-size: 26px;
+    }
+}
+
+
+.burger-mondays-promo {
+    background-color: #000f55; /* Dark blue background */
+  
+    color: #fff;
+    overflow: hidden; /* To contain floated/positioned elements */
+    position: relative;
+}
+
+.promo-content-wrapper {
+    max-width: 1200px; /* Or a suitable max-width for your content */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 1; /* Ensure content is above background patterns */
+}
+
+.promo-text-area {
+    flex: 1;
+    padding-left: 40px; /* Or adjust as needed */
+    text-align: left;
+    max-width: 50%; /* Adjust width for the text area */
+}
+
+.promo-label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffc107; /* Yellow color */
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.promo-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.promo-description {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+.promo-description .small-text {
+    display: block;
+    font-size: 12px;
+    margin-top: 15px;
+    line-height: 1.4;
+    color: #a0a0a0;
+}
+
+.promo-description a {
+    color: #ffc107; /* Yellow for links */
+    text-decoration: underline;
+}
+
+.promo-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.promo-button:hover {
+    background-color: #fff;
+    color: #000f55;
+}
+
+.promo-image-area {
+    flex: 1;
+    position: relative;
+    padding-right: 40px; /* Adjust as needed */
+    display: flex;
+    justify-content: flex-end; /* Pushes image to the right */
+    align-items: center;
+}
+
+.ts-cs-top-right {
+    position: absolute;
+    top: -15px; /* Adjust as needed */
+    right: 40px; /* Aligns with padding-right of parent */
+    font-size: 12px;
+    color: #fff;
+    opacity: 0.7;
+    font-family: 'Rubik', sans-serif;
+}
+
+.promo-image-overlay {
+    position: relative;
+    max-width: 600px; /* Control image width */
+}
+
+.promo-main-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* If the image isn't perfectly rectangular, add border-radius */
+}
+
+.promo-price-tag {
+    position: absolute;
+    top: 50px; /* Adjust position */
+    right: 20px; /* Adjust position */
+    background-color: #cb2d29; /* Red background */
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    line-height: 1;
+    text-align: center;
+    transform: rotate(5deg); /* Slight rotation */
+}
+
+.promo-price-tag sup {
+    font-size: 0.5em; /* Adjust superscript size */
+    vertical-align: super;
+}
+
+.promo-price-tag .small-text {
+    display: block;
+    font-size: 16px; /* Adjust size for "EACH" */
+    font-weight: 700;
+    margin-top: -5px;
+}
+
+/* Navigation arrows */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Above the image */
+}
+
+.nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+    left: 0; /* Align to the very left of the content wrapper */
+    margin-left: -20px; /* Pull it slightly out of the content area */
+}
+
+.right-arrow {
+    right: 0; /* Align to the very right of the content wrapper */
+    margin-right: -20px; /* Pull it slightly out of the content area */
+}
+
+/* Dots for slider indication */
+.promo-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .promo-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .promo-text-area {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .promo-image-area {
+        padding-right: 20px;
+        justify-content: center;
+    }
+
+    .promo-title {
+        font-size: 38px;
+    }
+
+    .ts-cs-top-right {
+        top: 10px;
+        right: 20px;
+    }
+
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .left-arrow {
+        left: 10px;
+        margin-left: 0;
+    }
+
+    .right-arrow {
+        right: 10px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .burger-mondays-promo {
+        padding: 30px 0;
+    }
+
+    .promo-title {
+        font-size: 30px;
+    }
+
+    .promo-price-tag {
+        font-size: 30px;
+        top: 30px;
+        right: 10px;
+        padding: 8px 12px;
+    }
+
+    .promo-price-tag .small-text {
+        font-size: 14px;
+    }
+
+    .promo-description {
+        font-size: 14px;
+    }
+
+    .promo-description .small-text {
+        font-size: 10px;
+    }
+}
