@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 1. CSS and Global Styles */
+/* 1. GLOBAL CSS */
 /* ======================================= */
 * {
     margin: 0;
@@ -300,7 +300,7 @@ header {
     font-family: 'Baloo 2', 'Montserrat', sans-serif;
     font-size: 37px;
     font-weight: 700;
-    color: #000f55; /* Dark blue color from the image */
+    color: #000f55; 
     margin-bottom: 25px;
     line-height: 1.2;
     text-transform: uppercase;
@@ -543,35 +543,34 @@ header {
 
 .franchise-hero {
     display: flex;
-    height: 435px; /* Ensure a decent height on desktop */
+    height: 435px; 
     width: 100%;
     
     align-content: center;
 }
 
 .hero-content-left {
-    /* Deep navy blue background to match the image */
     background-color: #000f55; 
-    flex: 0 0 45%; /* Fixed width for the text column (approx 45%) */
+    flex: 0 0 45%; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content */
-    padding: 60px 60px; /* Generous internal padding */
+    justify-content: center;
+    padding: 60px 60px; 
     box-sizing: border-box;
     text-align: center;
     align-content: center;
 }
 
 .hero-content-right {
-    flex: 1; /* Takes up the remaining space (approx 55%) */
-    background-image: url('images/own-a-thing.jpeg'); /* Placeholder image */
+    flex: 1;
+    background-image: url('images/own-a-thing.jpeg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 .pre-headline {
-    color: #ff7800; /* Reddish-orange accent color */
+    color: #ff7800; 
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -584,7 +583,7 @@ header {
 .main-headline {
     color: #FFFFFF;
     font-size: 30px;
-    font-weight: 900; /* Extra bold */
+    font-weight: 900; 
     text-transform: uppercase;
     line-height: 1.1;
     margin-top: 0;
@@ -593,7 +592,7 @@ header {
 }
 
 .description {
-    color: #fff; /* Light grey for body text */
+    color: #fff; 
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 50px;
@@ -616,7 +615,7 @@ header {
     text-align: center;
     transition: all 0.3s ease;
     width: 60%;
-    margin: 0 auto; /* This centers the button */
+    margin: 0 auto; 
 }
 
 .cta-button:hover {
@@ -625,8 +624,8 @@ header {
    
 }
 .app-promo-section {
-    display: flex; /* Activate Flexbox */
-    height: 435px; /* Ensures the section takes up significant vertical space */
+    display: flex; 
+    height: 435px; 
     max-width: 1400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -634,24 +633,21 @@ header {
 /* --- 2. Left Column: Image Area --- */
 
 .app-promo-image {
-    /* Takes up 60% of the available width */
     flex: 0 0 45%;
-    /* Placeholder for the actual background image from the picture */
     background: url('images/family-img.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
     font-weight: 700;
-    color: white; /* Color for placeholder text */
+    color: white; 
 }
 
 /* --- 3. Right Column: Content Area --- */
 
 .app-promo-content {
-    /* Takes up 40% of the available width */
     flex: 2; 
-    background-color: #000f55; /* Dark Navy Blue */
+    background-color: #000f55; 
     color: #fff;
     padding: 20px;
     
@@ -680,7 +676,7 @@ header {
 
 /* Subtitle: GET THE SPUR APP */
 .app-subtitle {
-    color: #ff7800; /* Red color */
+    color: #ff7800; 
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
@@ -692,8 +688,8 @@ header {
 
 /* Title: JOIN THE FAMILY */
 .app-title {
-    font-size: 39px; /* Slightly larger for impact */
-    font-weight: 900; /* Extra bold/black to match image */
+    font-size: 39px; 
+    font-weight: 900; 
     text-transform: uppercase;
     color: #fff;
     margin: 0 0 20px 0;
@@ -712,8 +708,8 @@ header {
 
 .app-buttons {
     display: flex;
-    justify-content: center; /* Center the row of buttons */
-    gap: 10px; /* Space between buttons */
+    justify-content: center; 
+    gap: 10px; 
     padding-top: 20px;
     
 }
@@ -725,7 +721,7 @@ header {
 }
 
 .app-button-img:hover {
-    transform: translateY(-2px); /* Slight lift effect on hover */
+    transform: translateY(-2px); 
 }
 
 /* ======================================= */
@@ -876,7 +872,7 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
-    width: 100%; /* Changed from the second CSS to allow for flex-wrap */
+    width: 100%;
 }
 
 .bottom-left img {
@@ -907,139 +903,3 @@ header {
     text-decoration: underline;
 }
 
-/* ======================================= */
-/* 8. RESPONSIVE DESIGN */
-/* ======================================= 
-@media (max-width: 768px) {
-    .heroh1 {
-        font-size: 32px;
-    }
-
-    .hero-logo {
-        width: 90px;
-    }
-
-    .content-rowh2 {
-        font-size: 22px;
-    }
-
-    .app-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .welcome-section h1 {
-        font-size: 1.5rem;
-    }
-
-    .top-footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .footer-links {
-        gap: 40px;
-        justify-content: center;
-    }
-
-    .footer-right {
-        text-align: center;
-    }
-
-    .bottom-footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-        padding: 20px;
-    }
-
-    .bottom-left {
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .bottom-links {
-        justify-content: center;
-        gap: 15px;
-    }
-}*/
-
-
-
-
-
-/* Responsive adjustments 
-@media (max-width: 992px) {
-    .promo-content-wrapper {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .promo-text-area {
-        max-width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .promo-image-area {
-        padding-right: 20px;
-        justify-content: center;
-    }
-
-    .promo-title {
-        font-size: 38px;
-    }
-
-    .ts-cs-top-right {
-        top: 10px;
-        right: 20px;
-    }
-
-    .nav-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 16px;
-    }
-
-    .left-arrow {
-        left: 10px;
-        margin-left: 0;
-    }
-
-    .right-arrow {
-        right: 10px;
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 900px) {
-    .burger-mondays-promo {
-        padding: 30px 0;
-    }
-
-    .promo-title {
-        font-size: 30px;
-    }
-
-    .promo-price-tag {
-        font-size: 30px;
-        top: 30px;
-        right: 10px;
-        padding: 8px 12px;
-    }
-
-    .promo-price-tag .small-text {
-        font-size: 14px;
-    }
-
-    .promo-description {
-        font-size: 14px;
-    }
-
-    .promo-description .small-text {
-        font-size: 10px;
-    }
-}*/
