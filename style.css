@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 1. CSS Reset and Global Styles */
+/* 1. CSS and Global Styles */
 /* ======================================= */
 * {
     margin: 0;
@@ -10,8 +10,8 @@
 
 body {
     font-family: 'Rubik', 'Montserrat', sans-serif;
-    color: #1b1b1b; /* Adjusted to the body text color from the second file */
-    background-color: #ffffff; /* Adjusted to the background color from the second file */
+    color: #fff;
+    background-color: #ffffff; 
 }
 
 a {
@@ -30,7 +30,7 @@ header {
     position: relative;
     height: 125px;
     width: auto;
-    color: #fff; /* Ensure header text is white */
+    color: #fff; 
 }
 
 /*Logo */
@@ -184,7 +184,7 @@ header {
 .promo-grid {
     display: flex;
     width: 100%;
-    height: 600px;
+    height: 400px;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -201,6 +201,7 @@ header {
     overflow: hidden;
     width: 650px;
     height: 390px;
+
 }
 
 
@@ -233,7 +234,7 @@ header {
 }
 
 /* Right Top - Plan a Party */
-.promo-party {
+.promo-party {    
     background: url('images/promo_party_kids.webp') no-repeat center center/cover;
     position: relative;
     display: flex;
@@ -260,8 +261,10 @@ header {
     border-left: 5px solid #fff;
 }
 
+   
 /* General Button Style for Split Panel */
 .btn-general {
+  
     background-color: #fff;
     color: #000f55;
     font-weight: 700;
@@ -277,20 +280,222 @@ header {
 }
 
 .btn-general:hover {
-    background-color: lightgrey;
+    background: #000f55;
+    color: white
 }
 
 /* ======================================= */
-/* 4. HERO SECTION */
+/* 4. ABOUT US INTRO SECTION */
+/* ======================================= */
+
+.about-us-intro {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-us-title {
+    font-family: 'Baloo 2', 'Montserrat', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #000f55; /* Dark blue color from the image */
+    margin-bottom: 25px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.about-us-text {
+    font-size: 16px;
+    color: #000f55;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.about-us-btn {
+    display: inline-block;
+    border: 2px solid #000f55;
+    color: #000f55;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.about-us-btn:hover {
+    background: #000f55;
+    color: white;
+}
+
+/* ======================================= */
+/* 5. PROMO GRID STYLES */
+/* ======================================= */
+
+.burger-mondays-promo {
+  background-color: #000f55; 
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  height: 350px; 
+}
+
+.promo-content-wrapper {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Text Area --- */
+.promo-text-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding: 0 40px;
+  box-sizing: border-box;
+  text-align: center;
+  
+}
+
+.promo-label {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 30px; /* Slightly smaller */
+  font-weight: 700;
+  color: #ff7800;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: -50px;
+}
+
+.promo-title {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 40px; /* Slightly smaller */
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.promo-description {
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px; /* Slightly smaller */
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.promo-description .small-text {
+  display: block;
+  font-size: 13px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.promo-description a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.promo-button-container {
+  text-align: center;
+}
+
+.promo-button {
+  display: inline-block;
+  padding: 10px 26px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.promo-button:hover {
+  background-color: #fff;
+  color: #000f55;
+}
+
+/* --- Image Area --- */
+.promo-image-area {
+  flex: 0 0 60%;
+  max-width: 60%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(to right, #000f55 0%, #000f55 10%, #001a88 100%);
+  height: 100%;
+}
+
+.promo-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Navigation Arrows --- */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.nav-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* ======================================= */
+/* 6. HERO SECTION 2 */
 /* ======================================= */
 .hero {
+    margin: 0;
+    padding: 0;
     background: linear-gradient(180deg, #ffffff, #f3f4f6);
     text-align: center;
-    padding: 100px 20px;
-    min-height: 100vh;
+   height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .hero-content {
@@ -298,29 +503,28 @@ header {
 }
 
 .hero-logo {
-    width: 120px;
-    margin-bottom: 25px;
+    width: 80%;
+    
 }
 
 .heroh1 {
-    font-family:'Oswald', sans-serif;
+    font-family:'Baloo 2', sans-serif;
     font-size: 44px;
     font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
+    color: #000f55;
+   
 }
 
 .herop {
     font-size: 16px;
-    color: #555;
+    color:#000f55;
     margin-bottom: 25px;
 }
 
 .find-btn {
     display: inline-block;
     border: 2px solid #1a1a2e;
-    color: #1a1a2e;
+    color:#000f55;
     text-decoration: none;
     font-weight: 700;
     padding: 12px 24px;
@@ -329,123 +533,216 @@ header {
 }
 
 .find-btn:hover {
-    background: #1a1a2e;
+    background: #000f55;
     color: white;
 }
 
 /* ======================================= */
-/* 5. FRANCHISE & APP SECTIONS */
+/* 7. FRANCHISE & APP SECTIONS */
 /* ======================================= */
-.franchise-section,
-.app-section {
-    background-color: #000f55;
-    padding: 60px 20px;
-    text-align: center;
-}
 
-.content-row {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.section-image {
+.franchise-hero {
+    display: flex;
+    height: 435px; /* Ensure a decent height on desktop */
     width: 100%;
-    max-width: 1400px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
+    
+    align-content: center;
 }
 
-.app-logo {
-    width: 150px;
-    margin: 20px auto 10px;
-    display: block;
+.hero-content-left {
+    /* Deep navy blue background to match the image */
+    background-color: #000f55; 
+    flex: 0 0 45%; /* Fixed width for the text column (approx 45%) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    padding: 60px 60px; /* Generous internal padding */
+    box-sizing: border-box;
+    text-align: center;
+    align-content: center;
 }
 
-.content-rowh6 {
-    color: #ff7800;
-    font-size: 16px;
-    line-height: 28px;
-    font-family:'Montserrat', sans-serif;
+.hero-content-right {
+    flex: 1; /* Takes up the remaining space (approx 55%) */
+    background-image: url('images/own-a-thing.jpeg'); /* Placeholder image */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.pre-headline {
+    color: #ff7800; /* Reddish-orange accent color */
+    font-size: 1.1rem;
     font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-family: 'Baloo 2', 'Montserrat', sans-serif;
+    font-size: 30px;
 }
 
-.content-rowh2 {
-    font-size: 26px;
-    line-height: 32px;
-    font-family:'Montserrat', sans-serif;
+.main-headline {
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 900; /* Extra bold */
     text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 20px;
-    font-weight: 800;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: 'Baloo 2', 'Montserrat', sans-serif;
 }
 
-.content-rowp {
-    font-size: 14px;
-    line-height: 22px;
-    color: #fff;
-    margin: 0 auto 20px;
-    max-width: 800px;
-    font-family:'Rubik', 'Montserrat',sans-serif;
+.description {
+    color: #fff; /* Light grey for body text */
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    max-width: 500px;
 }
 
-.content-button {
+/* CTA Button Styling */
+.cta-button {
     display: inline-block;
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 12px 30px;
+    padding: 8px 25px;
+    background-color: #000f55;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 60%;
+    margin: 0 auto; /* This centers the button */
+}
+
+.cta-button:hover {
+    background-color: #FFFFFF;
+    color: #000f55;
+   
+}
+.app-promo-section {
+    display: flex; /* Activate Flexbox */
+    height: 435px; /* Ensures the section takes up significant vertical space */
+    max-width: 1400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 2. Left Column: Image Area --- */
+
+.app-promo-image {
+    /* Takes up 60% of the available width */
+    flex: 0 0 45%;
+    /* Placeholder for the actual background image from the picture */
+    background: url('images/family-img.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: white; /* Color for placeholder text */
+}
+
+/* --- 3. Right Column: Content Area --- */
+
+.app-promo-content {
+    /* Takes up 40% of the available width */
+    flex: 2; 
+    background-color: #000f55; /* Dark Navy Blue */
+    color: #fff;
+    padding: 20px;
+    
+    /* Center the content vertically within this column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+}
+
+/* Wrapper to constrain max width and centralize content */
+.content-wrapper {
+    max-width: 450px; 
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* --- 4. Content Elements Styling --- */
+
+.app-logo {
+    width: 80px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Subtitle: GET THE SPUR APP */
+.app-subtitle {
+    color: #ff7800; /* Red color */
+    font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    border-radius: 6px;
-    margin-top: 20px;
-    transition: all 0.3s ease;
+    margin: 0 0 10px 0;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    font-family: 'Baloo 2', 'Montserrat', sans-serif;
 }
 
-.content-button:hover {
-    background-color: #fff;
-    color: #000f55;
+/* Title: JOIN THE FAMILY */
+.app-title {
+    font-size: 39px; /* Slightly larger for impact */
+    font-weight: 900; /* Extra bold/black to match image */
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 20px 0;
+    line-height: 1;
+    font-family: 'Baloo 2', 'Montserrat', sans-serif;
 }
+
+/* Paragraph Text */
+.app-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+    text-align: center; 
+}
+
 
 .app-buttons {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    justify-content: center; /* Center the row of buttons */
+    gap: 10px; /* Space between buttons */
+    padding-top: 20px;
+    
 }
 
-.app-buttons a {
-    display: inline-block;
-}
-
-.app-buttons img {
-    height: 50px;
+.app-button-img {
+    height: 45px; 
     width: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease-in-out;
 }
 
-.app-buttons img:hover {
-    transform: scale(1.05);
+.app-button-img:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 /* ======================================= */
-/* 6. WELCOME SECTION */
+/* 8. WELCOME SECTION */
 /* ======================================= */
 .welcome-section {
-    max-width: 800px;
+    max-width: 990px;
     margin: 60px auto;
     padding: 40px 20px;
 }
 
 .welcome-section h1 {
-    font-size: 2rem;
+    font-size: 39px;
     color: #000f55;
     text-align: center;
     margin-bottom: 30px;
+    font-family: 'Baloo 2', 'Montserrat', sans-serif;
 }
 
 .welcome-section p {
@@ -453,7 +750,8 @@ header {
     line-height: 1.6;
     color: #000f55;
     margin-bottom: 20px;
-    text-align: justify;
+    text-align: center;
+   
 }
 
 .welcome-section a {
@@ -467,24 +765,27 @@ header {
 }
 
 /* ======================================= */
-/* 7. FOOTER */
+/* 9. FOOTER */
 /* ======================================= */
 
 /* Top Footer */
 .top-footer {
     background-color: #ffffff;
-    padding: 40px 60px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     border-bottom: 1px solid #e0e0e0;
+    border-top: 2px solid #e0e0e0;
 }
 
 .footer-logo img {
-    height: 80px;
+    height: 100px;
     width: auto;
     display: block;
+    left: 20px;
+    position: relative;
+    top: 30px;
 }
 
 .footer-logo p {
@@ -499,6 +800,9 @@ header {
     display: flex;
     gap: 80px;
     flex-wrap: wrap;
+    left: -200px;
+    position: relative;
+    margin: 35px;
 }
 
 .footer-column {
@@ -560,7 +864,7 @@ header {
 /* Bottom Footer */
 .bottom-footer {
     background-color: #f2f4f7;
-    padding: 20px 60px;
+    padding: 40px 130px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -576,9 +880,11 @@ header {
 }
 
 .bottom-left img {
-    height: 60px;
+    height: 80px;
     width: auto;
     display: block;
+    left: -70px;
+    position: relative;
 }
 
 .bottom-links {
@@ -603,7 +909,7 @@ header {
 
 /* ======================================= */
 /* 8. RESPONSIVE DESIGN */
-/* ======================================= */
+/* ======================================= 
 @media (max-width: 768px) {
     .heroh1 {
         font-size: 32px;
@@ -658,272 +964,13 @@ header {
         justify-content: center;
         gap: 15px;
     }
-}
-
-/* ======================================= */
-/* 9. ABOUT US INTRO SECTION */
-/* ======================================= */
-
-.about-us-intro {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #ffffff;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.about-us-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 34px;
-    font-weight: 700;
-    color: #000f55; /* Dark blue color from the image */
-    margin-bottom: 25px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.about-us-text {
-    font-size: 16px;
-    color: #000f55;
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
-}
-
-.about-us-btn {
-    display: inline-block;
-    border: 2px solid #000f55;
-    color: #000f55;
-    text-decoration: none;
-    font-weight: 700;
-    padding: 12px 24px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-.about-us-btn:hover {
-    background: #000f55;
-    color: white;
-}
-
-/* Update the media query to include the new section styles */
-@media (max-width: 768px) {
-    /* ... existing media query styles ... */
-
-    .about-us-title {
-        font-size: 26px;
-    }
-}
+}*/
 
 
-.burger-mondays-promo {
-    background-color: #000f55; /* Dark blue background */
-  
-    color: #fff;
-    overflow: hidden; /* To contain floated/positioned elements */
-    position: relative;
-}
-
-.promo-content-wrapper {
-    max-width: 1200px; /* Or a suitable max-width for your content */
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    position: relative;
-    z-index: 1; /* Ensure content is above background patterns */
-}
-
-.promo-text-area {
-    flex: 1;
-    padding-left: 40px; /* Or adjust as needed */
-    text-align: left;
-    max-width: 50%; /* Adjust width for the text area */
-}
-
-.promo-label {
-    display: block;
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #ffc107; /* Yellow color */
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.promo-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 48px;
-    font-weight: 900;
-    color: #fff;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.promo-description {
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #e0e0e0;
-}
-
-.promo-description .small-text {
-    display: block;
-    font-size: 12px;
-    margin-top: 15px;
-    line-height: 1.4;
-    color: #a0a0a0;
-}
-
-.promo-description a {
-    color: #ffc107; /* Yellow for links */
-    text-decoration: underline;
-}
-
-.promo-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.promo-button:hover {
-    background-color: #fff;
-    color: #000f55;
-}
-
-.promo-image-area {
-    flex: 1;
-    position: relative;
-    padding-right: 40px; /* Adjust as needed */
-    display: flex;
-    justify-content: flex-end; /* Pushes image to the right */
-    align-items: center;
-}
-
-.ts-cs-top-right {
-    position: absolute;
-    top: -15px; /* Adjust as needed */
-    right: 40px; /* Aligns with padding-right of parent */
-    font-size: 12px;
-    color: #fff;
-    opacity: 0.7;
-    font-family: 'Rubik', sans-serif;
-}
-
-.promo-image-overlay {
-    position: relative;
-    max-width: 600px; /* Control image width */
-}
-
-.promo-main-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px; /* If the image isn't perfectly rectangular, add border-radius */
-}
-
-.promo-price-tag {
-    position: absolute;
-    top: 50px; /* Adjust position */
-    right: 20px; /* Adjust position */
-    background-color: #cb2d29; /* Red background */
-    color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 900;
-    font-size: 40px;
-    padding: 10px 15px;
-    border-radius: 8px;
-    line-height: 1;
-    text-align: center;
-    transform: rotate(5deg); /* Slight rotation */
-}
-
-.promo-price-tag sup {
-    font-size: 0.5em; /* Adjust superscript size */
-    vertical-align: super;
-}
-
-.promo-price-tag .small-text {
-    display: block;
-    font-size: 16px; /* Adjust size for "EACH" */
-    font-weight: 700;
-    margin-top: -5px;
-}
-
-/* Navigation arrows */
-.nav-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-    z-index: 10; /* Above the image */
-}
-
-.nav-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.left-arrow {
-    left: 0; /* Align to the very left of the content wrapper */
-    margin-left: -20px; /* Pull it slightly out of the content area */
-}
-
-.right-arrow {
-    right: 0; /* Align to the very right of the content wrapper */
-    margin-right: -20px; /* Pull it slightly out of the content area */
-}
-
-/* Dots for slider indication */
-.promo-dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.dot.active {
-    background-color: #fff;
-}
 
 
-/* Responsive adjustments */
+
+/* Responsive adjustments 
 @media (max-width: 992px) {
     .promo-content-wrapper {
         flex-direction: column;
@@ -995,4 +1042,4 @@ header {
     .promo-description .small-text {
         font-size: 10px;
     }
-}
+}*/
